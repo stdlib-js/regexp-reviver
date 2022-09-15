@@ -1,7 +1,7 @@
 {
   "name": "@stdlib/regexp-reviver",
   "version": "0.0.0",
-  "description": "Revive a JSON-serialized regular expression object.",
+  "description": "Revive a JSON-serialized regular expression.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -40,7 +40,6 @@
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
     "@stdlib/regexp-to-json": "^0.0.x",
-    "@stdlib/utils-copy": "^0.0.x",
     "@stdlib/utils-parse-json": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",

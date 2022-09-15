@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Revive a JSON-serialized [regular expression][regexp].
+> Revive a JSON-serialized [regular expression][mdn-regexp].
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -62,16 +62,18 @@ var reviveRegExp = require( '@stdlib/regexp-reviver' );
 
 #### reviveRegExp( key, value )
 
-Revives a JSON-serialized [regular expression][regexp].
+Revives a JSON-serialized [regular expression][mdn-regexp].
 
 ```javascript
+var parseJSON = require( '@stdlib/utils-parse-json' );
+
 var str = '{"type":"RegExp","pattern":"ab+c","flags":""}';
 
-var regex = JSON.parse( str, reviveRegExp );
+var re = parseJSON( str, reviveRegExp );
 // returns <RegExp>
 ```
 
-For details on the JSON serialization format, see [regexp-to-json][@stdlib/regexp/to-json].
+For details on the JSON serialization format, see [`@stdlib/regexp/to-json`][@stdlib/regexp/to-json].
 
 </section>
 
@@ -84,26 +86,20 @@ For details on the JSON serialization format, see [regexp-to-json][@stdlib/regex
 ## Examples
 
 ```javascript
-var regex2json = require( '@stdlib/regexp-to-json' );
+var parseJSON = require( '@stdlib/utils-parse-json' );
+var regexp2json = require( '@stdlib/regexp-to-json' );
 var reviveRegExp = require( '@stdlib/regexp-reviver' );
 
-var regex = /ab+c/;
-var json = regex2json( regex );
-/* returns
-    {
-        'type': 'RegExp',
-        'pattern': 'ab+c',
-        'flags': ''
-    }
-*/
+var re1 = /ab+c/;
+var json = regexp2json( re1 );
 
 var str = JSON.stringify( json );
 // returns '{"type":"RegExp","pattern":"ab+c","flags":""}'
 
-var regex2 = JSON.parse( str, reviveRegExp );
+var re2 = parseJSON( str, reviveRegExp );
 // returns <RegExp>
 
-var bool = ( String( regex ) === String( regex2 ) );
+var bool = ( re1.toString() === re2.toString() );
 // returns true
 ```
 
@@ -196,13 +192,9 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/regexp-reviver/main/LICENSE
 
-<!-- <related-links> -->
-
-[regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+[mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 [@stdlib/regexp/to-json]: https://github.com/stdlib-js/regexp-to-json
-
-<!-- </related-links> -->
 
 </section>
 
