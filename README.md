@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/regexp-reviver/tags). For example,
+
+```javascript
 import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.0.1-esm/index.mjs';
 ```
 
@@ -77,7 +82,7 @@ For details on the JSON serialization format, see [`@stdlib/regexp/to-json`][@st
 
 import parseJSON from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@esm/index.mjs';
 import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.0.1-esm/index.mjs';
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
 
 var re1 = /ab+c/;
 var json = regexp2json( re1 );
