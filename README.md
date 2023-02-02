@@ -43,6 +43,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+reviveRegExp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/regexp-reviver/tags). For example,
+
+```javascript
 reviveRegExp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.0.1-umd/browser.js' )
 ```
 
@@ -55,7 +60,7 @@ var reviveRegExp = require( 'path/to/vendor/umd/regexp-reviver/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.0.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -99,7 +104,7 @@ For details on the JSON serialization format, see [`@stdlib/regexp/to-json`][@st
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.0.1-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
