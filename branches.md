@@ -38,12 +38,12 @@ C -->|bundle| D[esm];
 C -->|bundle| E[deno];
 C -->|bundle| F[umd];
 
-click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/regexp/reviver"
-click B href "https://github.com/stdlib-js/regexp-reviver/tree/main"
-click C href "https://github.com/stdlib-js/regexp-reviver/tree/production"
-click D href "https://github.com/stdlib-js/regexp-reviver/tree/esm"
-click E href "https://github.com/stdlib-js/regexp-reviver/tree/deno"
-click F href "https://github.com/stdlib-js/regexp-reviver/tree/umd"
+%% click A href "https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/regexp/reviver"
+%% click B href "https://github.com/stdlib-js/regexp-reviver/tree/main"
+%% click C href "https://github.com/stdlib-js/regexp-reviver/tree/production"
+%% click D href "https://github.com/stdlib-js/regexp-reviver/tree/esm"
+%% click E href "https://github.com/stdlib-js/regexp-reviver/tree/deno"
+%% click F href "https://github.com/stdlib-js/regexp-reviver/tree/umd"
 ```
 
 [stdlib-url]: https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/regexp/reviver
