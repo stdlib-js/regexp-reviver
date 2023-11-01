@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2022 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,103 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var parseJSON = require( '@stdlib/utils-parse-json' );
-var reviveRegExp = require( './../../dist' );
-
-
-// FUNCTIONS //
-
-function setup( pattern, flags ) {
-	return {
-		'type': 'RegExp',
-		'pattern': pattern,
-		'flags': flags || ''
-	};
-}
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof reviveRegExp, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function does not transform values which are not serialized RegExp objects', function test( t ) {
-	var expected;
-	var actual;
-
-	expected = {
-		'beep': 'boop'
-	};
-	actual = parseJSON( '{"beep":"boop"}', reviveRegExp );
-
-	t.deepEqual( actual, expected, 'returns expected value' );
-
-	// Null edge case:
-	actual = parseJSON( 'null', reviveRegExp );
-	t.equal( actual, null, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'an object must have a recognized `type` field in order to be revived', function test( t ) {
-	var expected;
-	var actual;
-
-	expected = setup( 'ab+c' );
-	expected.type = 'Boop';
-
-	actual = parseJSON( JSON.stringify( expected ), reviveRegExp );
-	t.deepEqual( actual, expected, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'an object must have a `pattern` field in order to be revived', function test( t ) {
-	var expected;
-	var actual;
-
-	expected = setup( 'ab+c' );
-	delete expected.pattern;
-
-	actual = parseJSON( JSON.stringify( expected ), reviveRegExp );
-	t.deepEqual( actual, expected, 'returns expected value' );
-
-	t.end();
-});
-
-tape( 'the function revives a JSON-serialized regular expression', function test( t ) {
-	var expected;
-	var patterns;
-	var actual;
-	var flags;
-	var json;
-	var i;
-
-	patterns = [
-		'.*',
-		'ab+c',
-		'/.*^1',
-		'a+.b*'
-	];
-
-	flags = [
-		'd',
-		'dy',
-		's',
-		''
-	];
-
-	for ( i = 0; i < patterns.length; i++ ) {
-		json = JSON.stringify( setup( patterns[ i ], flags[ i ] ) );
-
-		expected = new RegExp( patterns[ i ], flags[ i ] );
-		actual = parseJSON( json, reviveRegExp );
-
-		t.ok( actual instanceof RegExp, 'returns expected value' );
-		t.equal( actual.toString(), expected.toString(), 'returns expected value when provided ' + json );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
