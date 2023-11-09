@@ -45,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/regexp-reviver
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
+var reviveRegExp = require( '@stdlib/regexp-reviver' );
 ```
 
 #### reviveRegExp( key, value )
@@ -60,7 +76,7 @@ import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@e
 Revives a JSON-serialized [regular expression][mdn-regexp].
 
 ```javascript
-import parseJSON from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@esm/index.mjs';
+var parseJSON = require( '@stdlib/utils-parse-json' );
 
 var str = '{"type":"RegExp","pattern":"ab+c","flags":""}';
 
@@ -80,15 +96,10 @@ For details on the JSON serialization format, see [`@stdlib/regexp-to-json`][@st
 
 ## Examples
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import parseJSON from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@esm/index.mjs';
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
+```javascript
+var parseJSON = require( '@stdlib/utils-parse-json' );
+var regexp2json = require( '@stdlib/regexp-to-json' );
+var reviveRegExp = require( '@stdlib/regexp-reviver' );
 
 var re1 = /ab+c/;
 var json = regexp2json( re1 );
@@ -101,10 +112,6 @@ var re2 = parseJSON( str, reviveRegExp );
 
 var bool = ( re1.toString() === re2.toString() );
 // returns true
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -123,6 +130,12 @@ var bool = ( re1.toString() === re2.toString() );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/regexp-to-json`][@stdlib/regexp/to-json]</span><span class="delimiter">: </span><span class="description">return a JSON representation of a regular expression.</span>
+
 </section>
 
 <!-- /.related -->
@@ -136,7 +149,7 @@ var bool = ( re1.toString() === re2.toString() );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -198,7 +211,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-[@stdlib/regexp/to-json]: https://github.com/stdlib-js/regexp-to-json/tree/esm
+[@stdlib/regexp/to-json]: https://github.com/stdlib-js/regexp-to-json
+
+<!-- <related-links> -->
+
+<!-- </related-links> -->
 
 </section>
 
