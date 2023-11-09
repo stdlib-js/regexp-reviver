@@ -130,6 +130,12 @@ var bool = ( re1.toString() === re2.toString() );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/regexp-to-json`][@stdlib/regexp/to-json]</span><span class="delimiter">: </span><span class="description">return a JSON representation of a regular expression.</span>
+
 </section>
 
 <!-- /.related -->
@@ -206,6 +212,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 [@stdlib/regexp/to-json]: https://github.com/stdlib-js/regexp-to-json
+
+<!-- <related-links> -->
+
+<!-- </related-links> -->
 
 </section>
 
