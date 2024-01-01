@@ -20,7 +20,7 @@
 
 // MODULES //
 
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var parseJSON = require( '@stdlib/utils-parse-json' );
 var regexp2json = require( '@stdlib/regexp-to-json' );
 var pkg = require( './../package.json' ).name;
