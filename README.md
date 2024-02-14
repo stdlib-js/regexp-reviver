@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@deno/mod.js';
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.2.0-deno/mod.js';
 ```
 
 #### reviveRegExp( key, value )
@@ -83,7 +83,7 @@ For details on the JSON serialization format, see [`@stdlib/regexp-to-json`][@st
 ```javascript
 import parseJSON from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@deno/mod.js';
 import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@deno/mod.js';
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@deno/mod.js';
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.2.0-deno/mod.js';
 
 var re1 = /ab+c/;
 var json = regexp2json( re1 );
