@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.2.3-esm/index.mjs';
 ```
 
 #### reviveRegExp( key, value )
@@ -88,7 +88,7 @@ For details on the JSON serialization format, see [`@stdlib/regexp-to-json`][@st
 
 import parseJSON from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-parse-json@esm/index.mjs';
 import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
-import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@esm/index.mjs';
+import reviveRegExp from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-reviver@v0.2.3-esm/index.mjs';
 
 var re1 = /ab+c/;
 var json = regexp2json( re1 );
